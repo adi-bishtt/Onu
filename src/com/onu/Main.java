@@ -1,15 +1,21 @@
 package com.onu;
 
 import com.onu.model.Color;
+import com.onu.model.Deck;
 import com.onu.model.Type;
 import com.onu.model.Card;
 
 public class Main {
     public static void main(String[] args) {
 
-        Card redFive = new Card(Color.RED , Type.SKIP , 5);
-        System.out.println(redFive.getColor());
-        System.out.println(redFive.getType());
-        System.out.println(redFive.getValue());
+        // Create a deck
+        Deck deck = new Deck();
+
+        System.out.println("Deck size: " + deck.size()); // should print 108
+
+        Card drawn = deck.draw();
+        System.out.println("Drew: " + drawn.getColor() + " " + drawn.getType() + " " + drawn.getValue());
+
+        System.out.println("Deck size after draw: " + deck.size()); // should print 107
     }
 }
