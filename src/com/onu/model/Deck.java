@@ -41,6 +41,14 @@ public class Deck {
         }
     }
 
+    public void addCard(Card card) {
+        cards.add(card);
+    }
+
+    public void shuffleDeck() {
+        Collections.shuffle(cards);
+    }
+
     private void shuffle() {
         Collections.shuffle(cards);
     }

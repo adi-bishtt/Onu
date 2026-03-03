@@ -46,6 +46,15 @@ public class GameState {
         discardPile.add(card);
     }
 
+    public ArrayList<Card> getDiscardPile() {
+        return discardPile;
+    }
+
+    public void clearDiscardPile(Card topCard) {
+        discardPile.clear();
+        discardPile.add(topCard);
+    }
+
     public ArrayList<Player> getPlayers() { return players; }
     public Deck getDeck() { return deck; }
     public Color getCurrentColor() { return currentColor; }
