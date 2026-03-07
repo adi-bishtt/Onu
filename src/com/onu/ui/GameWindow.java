@@ -3,12 +3,11 @@ package com.onu.ui;
 import com.onu.model.*;
 import com.onu.model.GameState;
 import com.onu.model.Player;
+import static com.onu.model.Type.NUMBER;
 
 
 import javax.swing.*;
 import java.awt.*;
-
-import static com.onu.model.Type.NUMBER;
 
 public class GameWindow extends JFrame {
 
