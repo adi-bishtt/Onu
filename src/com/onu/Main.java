@@ -6,6 +6,7 @@ import com.onu.model.Type;
 import com.onu.model.Card;
 import com.onu.model.Player;
 import com.onu.model.GameState;
+import com.onu.ui.GameWindow;
 
 import java.util.ArrayList;
 
@@ -14,7 +15,7 @@ public class Main {
         // Setup
         ArrayList<Player> players = new ArrayList<>();
         players.add(new Player("Aditya"));
-        players.add(new Player("Taicho"));
+        players.add(new Player("Anushka"));
 
         Deck deck = new Deck();
         GameState gameState = new GameState(players, deck);
@@ -22,10 +23,11 @@ public class Main {
 
         // Start game
         gameEngine.startGame();
+        new GameWindow(gameState);
 
         System.out.println("=== ONU STARTED ===");
         System.out.println("Aditya cards: " + players.get(0).handSize());
-        System.out.println("Taicho cards: " + players.get(1).handSize());
+        System.out.println("Anushka cards: " + players.get(1).handSize());
         System.out.println("Top card: " + gameState.getTopCard().getColor() + " " + gameState.getTopCard().getType() + " " + gameState.getTopCard().getValue());
         System.out.println("---");
 
